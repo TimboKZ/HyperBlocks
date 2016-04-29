@@ -1,0 +1,28 @@
+// Box Sizing
+@mixin box-sizing($arguments...)
+  -webkit-box-sizing: $arguments
+  -moz-box-sizing: $arguments
+  box-sizing: $arguments
+
+// Box Shadows
+@mixin box-shadow($arguments...)
+  -webkit-box-shadow: $arguments
+  -moz-box-shadow: $arguments
+  box-shadow: $arguments
+
+// Transform
+@mixin transform($arguments...)
+  -webkit-transform: $arguments
+  -ms-transform: $arguments
+  transform: $arguments
+
+// Sprites
+@mixin sprite($column, $row, $size, $offset: 0)
+  background-position: -(($column - 1) * $size + $offset) -(($row - 1) * $size + $offset)
+  background-size: $size * $hb-sprite-width $size * $hb-sprite-height
+  background-image: url($hb-sprite-name)
+  background-repeat: no-repeat
+@mixin sprite-pos($column, $row, $size, $offset: 0)
+  $left: (($column - 1) * $size + $offset)
+  $top: (($row - 1) * $size + $offset)
+  background-position: (-$left) (-$top)

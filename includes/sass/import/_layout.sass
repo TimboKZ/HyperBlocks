@@ -1,0 +1,371 @@
+@import "variables"
+@import "HyperBlocksVariables"
+@import "mixins"
+
+html
+  height: 100%
+  width: 100%
+
+body
+  background-color: $body-background
+  @include box-sizing(border-box)
+  position: relative
+  min-height: 400px
+  min-width: 1110px
+  padding: 20px
+  height: 100%
+  width: 100%
+  margin: 0
+
+#wrapper
+  @include  box-shadow($wrapper-shadow 0 0 5px)
+  background-color: $wrapper-background
+  @include box-sizing(border-box)
+  text-align: center
+  position: relative
+  padding: 10px
+  height: 100%
+  width: 100%
+
+.column-wrapper
+  @include box-sizing(border-box)
+  display: inline-block
+  vertical-align: top
+  padding: 10px
+  height: 100%
+
+.column
+  background-color: $column-background
+  @include box-sizing(border-box)
+  padding: 40px 0 0 0
+  position: relative
+  text-align: left
+  height: 100%
+  width: 330px
+
+  .tabs
+    font-family: 'Open Sans Condensed', sans-serif
+    background-color: $tabs-background
+    margin: -40px 0 0 0
+    text-align: center
+    position: relative
+    color: $tabs-text
+    height: 40px
+    .tab
+      display: inline-block
+      text-align: center
+      line-height: 40px
+      font-size: medium
+      height: 40px
+      span
+        color: $tabs-text-secondary
+      &.full
+        width: 100%
+      &.half
+        width: 50%
+      &.clickable:hover
+        background-color: $tabs-background-hover
+        cursor: pointer
+      &.active
+        @include box-shadow(inset $tabs-shadow-active 0 2px 0)
+      &.inactive
+        background-color: $tabs-background-inactive
+
+  .scroll-wrapper
+    overflow-x: hidden
+    overflow-y: scroll
+    position: relative
+    height: 100%
+    &::-webkit-scrollbar
+      background-color: $scrollbar-background
+      width: 10px
+    &::-webkit-scrollbar-thumb
+      background-color: $scrollbar-thumb-background
+
+  .scroll
+    padding: 10px 10px 0 10px
+    width: 300px
+
+    & > p
+      font-family: Arial, Helvetica, sans-serif
+      background-color: $content-background
+      color: $content-text
+      line-height: 1.5em
+      font-size: smaller
+      margin: 0 0 10px 0
+      text-indent: 5px
+      padding: 10px
+      a
+        color: $content-text
+        &:hover
+          text-decoration: none
+
+    & > a
+      background-color: $content-button-background
+      font-family: Arial, Helvetica, sans-serif
+      color: $content-button-color
+      text-decoration: none
+      text-align: center
+      margin: 0 0 10px 0
+      line-height: 40px
+      cursor: pointer
+      display: block
+      height: 40px
+      &.important
+        background-color: $content-button-important-background
+
+// Presets start
+#presets
+  font: normal smaller Verdana, Arial, Helvetica, Sans-serif
+// Presets end
+
+// Sidebar start
+//noinspection CssUnknownTarget
+#sidebar
+  background-color: $sidebar-background
+  padding: 0
+  #sidebar-top
+    position: relative
+    &:before
+      position: absolute
+      display: block
+      height: 100%
+      content: ''
+      width: 100%
+      z-index: 1
+      left: 0
+      top: 0
+    .submit
+      background: url('../../images/reddit-sprite.png') repeat 0px -278px
+      font: normal medium Verdana, Arial, Helvetica, sans-serif
+      border: solid 1px $sidebar-submit-border
+      color: $sidebar-submit-text
+      letter-spacing: -1px
+      padding: 0 24px 0 0
+      text-align: center
+      position: relative
+      margin: 0 0 10px 0
+      font-weight: bold
+      line-height: 29px
+      height: 29px
+      &:before
+        background: $sidebar-background url('../../images/reddit-sprite.png') no-repeat -30px -547px
+        position: absolute
+        display: block
+        height: 31px
+        content: ''
+        right: -1px
+        width: 24px
+        top: -1px
+    .subreddit
+      font-family: Arial, Verdana, Helvetica, sans-serif
+      margin: 5px 0 2px 0
+      font-weight: bold
+      font-size: 19px
+    .subscribe
+      background: url('../../images/reddit-sprite.png') repeat 0 0
+      font: normal x-small Verdana, Arial, Helvetica, sans-serif
+      border: solid 1px $sidebar-subscribe-border
+      color: $sidebar-subscribe-text
+      text-transform: lowercase
+      display: inline-block
+      border-radius: 3px
+      padding: 1px 6px
+    .readers
+      font: normal small Verdana, Arial, Helvetica, sans-serif
+      display: inline-block
+      padding: 1px 6px
+    .users
+      font: normal small Verdana, Arial, Helvetica, sans-serif
+      padding: 5px 0 0 0
+      &:before
+        background: url('../../images/reddit-sprite.png') no-repeat -88px -730px
+        height: 16px
+        margin-right: 5px
+        display: block
+        content: ""
+        width: 16px
+        float: left
+
+
+  #sidebar-md
+    font: normal smaller Verdana, Arial, Helvetica, Sans-serif
+    padding: 15px 0 30px 0
+    min-height: 300px
+    .placeholder
+      font: normal x-small Verdana, Arial, Helvetica, sans-serif
+      background-color: $sidebar-placeholder-background
+      border: dashed 1px $sidebar-placeholder-border
+      color: $sidebar-placeholder-text
+      text-align: center
+      position: relative
+      margin: 0 0 10px 0
+      &:before
+        margin: -10px 0 0 -10px
+        text-align: center
+        position: absolute
+        line-height: 20px
+        content: '+'
+        height: 20px
+        width: 20px
+        left: 50%
+        top: 50%
+// Sidebar end
+
+
+
+
+// Properties start
+#properties
+  .property
+    font-family: Arial, Helvetica, sans-serif
+    background-color: $content-background
+    color: $content-text
+    line-height: 1.5em
+    font-size: smaller
+    margin: 0 0 10px 0
+    padding: 5px
+    .title, .input, .textarea
+      margin: 5px
+    .input input
+      padding: 5px 10px
+      border: none
+      height: 20px
+      width: 260px
+      margin: 0
+      &:focus
+        outline: none
+    .textarea textarea
+      padding: 5px 10px
+      min-height: 40px
+      min-width: 260px
+      max-width: 260px
+      height: 100px
+      border: none
+      width: 260px
+      margin: 0
+      &:focus
+        outline: none
+
+  #colour-picker
+    .options
+      span
+        @include box-shadow($properties-colour-shadow 0 0 5px)
+        background-color: transparent
+        display: inline-block
+        cursor: pointer
+        margin: 0 5px
+        height: 20px
+        width: 20px
+        &.transparent
+          position: relative
+          overflow: hidden
+          &:before
+            background-color: $properties-transparent-indicator
+            @include transform(rotateZ(45deg))
+            position: absolute
+            display: block
+            height: 4px
+            content: ''
+            width: 30px
+            left: -6px
+            top: 7px
+        @each $name, $colour in $hb-colours
+          &.#{$name}
+            background-color: $colour
+
+  & > a
+    background-color: $content-button-important-background
+    font-family: Arial, Helvetica, sans-serif
+    color: $content-button-color
+    text-decoration: none
+    text-align: center
+    margin: 0 0 10px 0
+    line-height: 40px
+    cursor: pointer
+    display: block
+    height: 40px
+// Properties end
+
+
+
+
+// HyperBlocks start
+.hyperblock
+  font: normal smaller Verdana, Arial, Helvetica, Sans-serif !important
+  @include box-sizing(border-box)
+  background-color: transparent
+  border: solid 1px transparent
+  position: relative
+  margin: 0 0 10px 0
+  padding: 10px
+  width: 300px
+  z-index: 50
+
+  &.selected
+    &:before
+      color: $sidebar-selected-text
+      text-align: center
+      font-size: x-large
+      position: absolute
+      line-height: 20px
+      display: block
+      content: '*'
+      height: 20px
+      z-index: 51
+      width: 20px
+      left: -8px
+      top: -4px
+
+  @each $name, $colour in $hb-colours
+    &[data-colour="#{$name}"]
+      border: solid 1px transparentize(darken($colour, 0.6), 0.8)
+      background-color: transparentize($colour, 0.8)
+
+  @import "HyperBlocksElements"
+
+  .markdown-hidden
+    display: none
+
+  &.heading
+    h1
+      p
+        padding: 0
+        margin: 0
+
+  h1
+    font-family: Arial, Verdana, Helvetica, sans-serif
+    font-weight: bold
+    text-align: left
+    font-size: 1.5em
+    padding: 5px
+    margin: 0
+  p
+    line-height: 1.25em
+    font-size: 1em
+    padding: 5px
+    margin: 0
+  a
+    color: $reddit-link-colour
+    text-decoration: none
+  a.button
+    background-color: transparent
+    border: solid 1px transparent
+    color: $hb-button-text
+    text-decoration: none
+    text-align: center
+    position: relative
+    font-size: large
+    display: block
+    padding: 15px
+    margin: -11px
+    @each $name, $colour in $hb-colours
+      &[data-colour="#{$name}"]
+        border: solid 1px transparentize(darken($colour, 0.8), 0.6)
+        background-color: transparentize($colour, 0.4)
+        &:hover
+          background-color: transparentize(darken($colour, 0.1), 0.2)
+    & > p
+      padding: 0
+      margin: 0
+// HyperBlocks end

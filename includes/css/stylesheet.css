@@ -1,0 +1,543 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #1abc9c;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 400px;
+  min-width: 1110px;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#wrapper {
+  -webkit-box-shadow: #666 0 0 5px;
+  -moz-box-shadow: #666 0 0 5px;
+  box-shadow: #666 0 0 5px;
+  background-color: #222;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.column-wrapper {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  height: 100%;
+}
+
+.column {
+  background-color: #444;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 0 0 0;
+  position: relative;
+  text-align: left;
+  height: 100%;
+  width: 330px;
+}
+.column .tabs {
+  font-family: "Open Sans Condensed", sans-serif;
+  background-color: #555;
+  margin: -40px 0 0 0;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  height: 40px;
+}
+.column .tabs .tab {
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  font-size: medium;
+  height: 40px;
+}
+.column .tabs .tab span {
+  color: #ccc;
+}
+.column .tabs .tab.full {
+  width: 100%;
+}
+.column .tabs .tab.half {
+  width: 50%;
+}
+.column .tabs .tab.clickable:hover {
+  background-color: #4f4f4f;
+  cursor: pointer;
+}
+.column .tabs .tab.active {
+  -webkit-box-shadow: inset #1abc9c 0 2px 0;
+  -moz-box-shadow: inset #1abc9c 0 2px 0;
+  box-shadow: inset #1abc9c 0 2px 0;
+}
+.column .tabs .tab.inactive {
+  background-color: #525252;
+}
+.column .scroll-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  height: 100%;
+}
+.column .scroll-wrapper::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 10px;
+}
+.column .scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.column .scroll {
+  padding: 10px 10px 0 10px;
+  width: 300px;
+}
+.column .scroll > p {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+  color: #fff;
+  line-height: 1.5em;
+  font-size: smaller;
+  margin: 0 0 10px 0;
+  text-indent: 5px;
+  padding: 10px;
+}
+.column .scroll > p a {
+  color: #fff;
+}
+.column .scroll > p a:hover {
+  text-decoration: none;
+}
+.column .scroll > a {
+  background-color: #1abc9c;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 0 10px 0;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+}
+.column .scroll > a.important {
+  background-color: #bc423d;
+}
+
+#presets {
+  font: normal smaller Verdana, Arial, Helvetica, Sans-serif;
+}
+
+#sidebar {
+  background-color: #fff;
+  padding: 0;
+}
+#sidebar #sidebar-top {
+  position: relative;
+}
+#sidebar #sidebar-top:before {
+  position: absolute;
+  display: block;
+  height: 100%;
+  content: "";
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+#sidebar #sidebar-top .submit {
+  background: url("../../images/reddit-sprite.png") repeat 0px -278px;
+  font: normal medium Verdana, Arial, Helvetica, sans-serif;
+  border: solid 1px #c4dbf1;
+  color: #369;
+  letter-spacing: -1px;
+  padding: 0 24px 0 0;
+  text-align: center;
+  position: relative;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  line-height: 29px;
+  height: 29px;
+}
+#sidebar #sidebar-top .submit:before {
+  background: #fff url("../../images/reddit-sprite.png") no-repeat -30px -547px;
+  position: absolute;
+  display: block;
+  height: 31px;
+  content: "";
+  right: -1px;
+  width: 24px;
+  top: -1px;
+}
+#sidebar #sidebar-top .subreddit {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  margin: 5px 0 2px 0;
+  font-weight: bold;
+  font-size: 19px;
+}
+#sidebar #sidebar-top .subscribe {
+  background: url("../../images/reddit-sprite.png") repeat 0 0;
+  font: normal x-small Verdana, Arial, Helvetica, sans-serif;
+  border: solid 1px #444;
+  color: #fff;
+  text-transform: lowercase;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+#sidebar #sidebar-top .readers {
+  font: normal small Verdana, Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding: 1px 6px;
+}
+#sidebar #sidebar-top .users {
+  font: normal small Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px 0 0 0;
+}
+#sidebar #sidebar-top .users:before {
+  background: url("../../images/reddit-sprite.png") no-repeat -88px -730px;
+  height: 16px;
+  margin-right: 5px;
+  display: block;
+  content: "";
+  width: 16px;
+  float: left;
+}
+#sidebar #sidebar-md {
+  font: normal smaller Verdana, Arial, Helvetica, Sans-serif;
+  padding: 15px 0 30px 0;
+  min-height: 300px;
+}
+#sidebar #sidebar-md .placeholder {
+  font: normal x-small Verdana, Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  border: dashed 1px #ccc;
+  color: #999;
+  text-align: center;
+  position: relative;
+  margin: 0 0 10px 0;
+}
+#sidebar #sidebar-md .placeholder:before {
+  margin: -10px 0 0 -10px;
+  text-align: center;
+  position: absolute;
+  line-height: 20px;
+  content: "+";
+  height: 20px;
+  width: 20px;
+  left: 50%;
+  top: 50%;
+}
+
+#properties .property {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+  color: #fff;
+  line-height: 1.5em;
+  font-size: smaller;
+  margin: 0 0 10px 0;
+  padding: 5px;
+}
+#properties .property .title, #properties .property .input, #properties .property .textarea {
+  margin: 5px;
+}
+#properties .property .input input {
+  padding: 5px 10px;
+  border: none;
+  height: 20px;
+  width: 260px;
+  margin: 0;
+}
+#properties .property .input input:focus {
+  outline: none;
+}
+#properties .property .textarea textarea {
+  padding: 5px 10px;
+  min-height: 40px;
+  min-width: 260px;
+  max-width: 260px;
+  height: 100px;
+  border: none;
+  width: 260px;
+  margin: 0;
+}
+#properties .property .textarea textarea:focus {
+  outline: none;
+}
+#properties #colour-picker .options span {
+  -webkit-box-shadow: #111 0 0 5px;
+  -moz-box-shadow: #111 0 0 5px;
+  box-shadow: #111 0 0 5px;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 5px;
+  height: 20px;
+  width: 20px;
+}
+#properties #colour-picker .options span.transparent {
+  position: relative;
+  overflow: hidden;
+}
+#properties #colour-picker .options span.transparent:before {
+  background-color: rgba(255, 0, 0, 0.6);
+  -webkit-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+  position: absolute;
+  display: block;
+  height: 4px;
+  content: "";
+  width: 30px;
+  left: -6px;
+  top: 7px;
+}
+#properties #colour-picker .options span.azure {
+  background-color: #007fff;
+}
+#properties #colour-picker .options span.golden {
+  background-color: #ffd700;
+}
+#properties #colour-picker .options span.gray {
+  background-color: #cccccc;
+}
+#properties #colour-picker .options span.magenta {
+  background-color: #ff0090;
+}
+#properties #colour-picker .options span.mantis {
+  background-color: #74C365;
+}
+#properties #colour-picker .options span.orangered {
+  background-color: #ff4500;
+}
+#properties #colour-picker .options span.plum {
+  background-color: #843179;
+}
+#properties #colour-picker .options span.red {
+  background-color: #ff0000;
+}
+#properties #colour-picker .options span.teal {
+  background-color: #008080;
+}
+#properties > a {
+  background-color: #bc423d;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 0 10px 0;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+}
+
+.hyperblock {
+  font: normal smaller Verdana, Arial, Helvetica, Sans-serif !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: solid 1px transparent;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  width: 300px;
+  z-index: 50;
+}
+.hyperblock.selected:before {
+  color: #1abc9c;
+  text-align: center;
+  font-size: x-large;
+  position: absolute;
+  line-height: 20px;
+  display: block;
+  content: "*";
+  height: 20px;
+  z-index: 51;
+  width: 20px;
+  left: -8px;
+  top: -4px;
+}
+.hyperblock[data-colour="azure"] {
+  border: solid 1px rgba(0, 125, 252, 0.2);
+  background-color: rgba(0, 127, 255, 0.2);
+}
+.hyperblock[data-colour="golden"] {
+  border: solid 1px rgba(252, 212, 0, 0.2);
+  background-color: rgba(255, 215, 0, 0.2);
+}
+.hyperblock[data-colour="gray"] {
+  border: solid 1px rgba(202, 202, 202, 0.2);
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.hyperblock[data-colour="magenta"] {
+  border: solid 1px rgba(252, 0, 142, 0.2);
+  background-color: rgba(255, 0, 144, 0.2);
+}
+.hyperblock[data-colour="mantis"] {
+  border: solid 1px rgba(114, 194, 99, 0.2);
+  background-color: rgba(116, 195, 101, 0.2);
+}
+.hyperblock[data-colour="orangered"] {
+  border: solid 1px rgba(252, 68, 0, 0.2);
+  background-color: rgba(255, 69, 0, 0.2);
+}
+.hyperblock[data-colour="plum"] {
+  border: solid 1px rgba(130, 48, 119, 0.2);
+  background-color: rgba(132, 49, 121, 0.2);
+}
+.hyperblock[data-colour="red"] {
+  border: solid 1px rgba(252, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.hyperblock[data-colour="teal"] {
+  border: solid 1px rgba(0, 125, 125, 0.2);
+  background-color: rgba(0, 128, 128, 0.2);
+}
+.hyperblock h1 {
+  padding: 5px;
+  margin: 0;
+}
+.hyperblock p {
+  padding: 5px;
+  margin: 0;
+}
+.hyperblock ul, .hyperblock ol {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+.hyperblock ul li, .hyperblock ol li {
+  padding: 5px 5px 5px 0;
+}
+.hyperblock ul li > p, .hyperblock ol li > p {
+  margin: 0;
+}
+.hyperblock blockquote {
+  border-left: solid 5px rgba(204, 204, 204, 0.6);
+  background-color: rgba(204, 204, 204, 0.2);
+  padding: 5px;
+  margin: 5px;
+}
+.hyperblock blockquote p {
+  padding: 5px;
+}
+.hyperblock .markdown-hidden {
+  display: none;
+}
+.hyperblock.heading h1 p {
+  padding: 0;
+  margin: 0;
+}
+.hyperblock h1 {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.5em;
+  padding: 5px;
+  margin: 0;
+}
+.hyperblock p {
+  line-height: 1.25em;
+  font-size: 1em;
+  padding: 5px;
+  margin: 0;
+}
+.hyperblock a {
+  color: #0079d3;
+  text-decoration: none;
+}
+.hyperblock a.button {
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  font-size: large;
+  display: block;
+  padding: 15px;
+  margin: -11px;
+}
+.hyperblock a.button[data-colour="azure"] {
+  border: solid 1px rgba(0, 125, 251, 0.4);
+  background-color: rgba(0, 127, 255, 0.6);
+}
+.hyperblock a.button[data-colour="azure"]:hover {
+  background-color: rgba(0, 127, 254, 0.8);
+}
+.hyperblock a.button[data-colour="golden"] {
+  border: solid 1px rgba(251, 212, 0, 0.4);
+  background-color: rgba(255, 215, 0, 0.6);
+}
+.hyperblock a.button[data-colour="golden"]:hover {
+  background-color: rgba(254, 215, 0, 0.8);
+}
+.hyperblock a.button[data-colour="gray"] {
+  border: solid 1px rgba(202, 202, 202, 0.4);
+  background-color: rgba(204, 204, 204, 0.6);
+}
+.hyperblock a.button[data-colour="gray"]:hover {
+  background-color: rgba(204, 204, 204, 0.8);
+}
+.hyperblock a.button[data-colour="magenta"] {
+  border: solid 1px rgba(251, 0, 142, 0.4);
+  background-color: rgba(255, 0, 144, 0.6);
+}
+.hyperblock a.button[data-colour="magenta"]:hover {
+  background-color: rgba(254, 0, 144, 0.8);
+}
+.hyperblock a.button[data-colour="mantis"] {
+  border: solid 1px rgba(113, 194, 98, 0.4);
+  background-color: rgba(116, 195, 101, 0.6);
+}
+.hyperblock a.button[data-colour="mantis"]:hover {
+  background-color: rgba(116, 195, 101, 0.8);
+}
+.hyperblock a.button[data-colour="orangered"] {
+  border: solid 1px rgba(251, 68, 0, 0.4);
+  background-color: rgba(255, 69, 0, 0.6);
+}
+.hyperblock a.button[data-colour="orangered"]:hover {
+  background-color: rgba(254, 69, 0, 0.8);
+}
+.hyperblock a.button[data-colour="plum"] {
+  border: solid 1px rgba(129, 48, 118, 0.4);
+  background-color: rgba(132, 49, 121, 0.6);
+}
+.hyperblock a.button[data-colour="plum"]:hover {
+  background-color: rgba(132, 49, 121, 0.8);
+}
+.hyperblock a.button[data-colour="red"] {
+  border: solid 1px rgba(251, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.6);
+}
+.hyperblock a.button[data-colour="red"]:hover {
+  background-color: rgba(254, 0, 0, 0.8);
+}
+.hyperblock a.button[data-colour="teal"] {
+  border: solid 1px rgba(0, 124, 124, 0.4);
+  background-color: rgba(0, 128, 128, 0.6);
+}
+.hyperblock a.button[data-colour="teal"]:hover {
+  background-color: rgba(0, 127, 127, 0.8);
+}
+.hyperblock a.button > p {
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,84 @@
+@import "import/HyperBlocksVariables"
+@import "import/mixins"
+/*
+ HyperBlocks v#{$hb-version} (http://www.reddit.com/r/HyperBlocks)
+ Copyright (c) 2015 Timur Kuzhagaliyev (TimboKZ)
+
+.static-invisible
+  position: static
+  display: block
+  font-size: 0
+  padding: 0
+  margin: 0
+  height: 0
+  width: 0
+  left: 0
+  top: 0
+
+.side
+  position: static
+  .md
+    a
+      @import "import/HyperBlocksIcons"
+
+      &[href^="#hb-"]
+        pointer-events: none
+        cursor: default
+      &[href^="#hb-button"]
+        display: none
+        & + a
+          background-color: transparent
+          border: solid 1px transparent
+          color: $hb-button-text
+          text-align: center
+          position: relative
+          font-size: large
+          display: block
+          padding: 15px
+          margin: -16px
+      @each $name, $colour in $hb-colours
+        &[href="#hb-button-#{$name}"] + a
+          border: solid 1px transparentize(darken($colour, 0.8), 0.6)
+          background-color: transparentize($colour, 0.4)
+          &:hover
+            background-color: transparentize(darken($colour, 0.1), 0.2)
+
+    & > p
+      display: none
+
+    & > blockquote
+      position: relative
+      margin: 20px 0
+      border: none
+      color: $hb-text
+      padding: 0
+      & > p:first-child
+        @extend .static-invisible
+        a
+          @extend .static-invisible
+          background-color: transparent
+          border-color: transparent
+          &:before
+            border: solid 1px transparent
+            background-color: transparent
+            position: absolute
+            display: block
+            height: 100%
+            content: ''
+            width: 100%
+            z-index: 0
+            left: -1px
+            top: -1px
+          @each $name, $colour in $hb-colours
+            &[href="#hb-block-#{$name}"]:before
+              border: solid 1px transparentize(darken($colour, 0.6), 0.8)
+              background-color: transparentize($colour, 0.8)
+
+      & > blockquote
+        counter-reset: hb-rules
+        position: relative
+        padding: 10px
+        border: none
+        z-index: 99
+        margin: 0
+        @import "import/HyperBlocksElements"

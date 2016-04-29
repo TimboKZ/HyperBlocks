@@ -1,0 +1,551 @@
+/* HyperBlocks v0.2 (http://www.reddit.com/r/HyperBlocks)
+ * Copyright (c) 2015 Timur Kuzhagaliyev (TimboKZ) */
+.static-invisible, .side .md > blockquote > p:first-child, .side .md > blockquote > p:first-child a {
+  position: static;
+  display: block;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+  left: 0;
+  top: 0;
+}
+
+.side {
+  position: static;
+}
+.side .md a[href^="#hb-icon-"] {
+  background-position: -26.4em;
+  background-size: 12em 14.4em;
+  background-image: url("%%hb-sprite%%");
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  height: 1.2em;
+  width: 1.2em;
+  margin: 0;
+}
+.side .md a[href^="#hb-icon-address-book"] {
+  background-position: 0em 0em;
+}
+.side .md a[href^="#hb-icon-attachment"] {
+  background-position: -1.2em 0em;
+}
+.side .md a[href^="#hb-icon-bar-chart"] {
+  background-position: -2.4em 0em;
+}
+.side .md a[href^="#hb-icon-battery"] {
+  background-position: -3.6em 0em;
+}
+.side .md a[href^="#hb-icon-battery-empty"] {
+  background-position: -4.8em 0em;
+}
+.side .md a[href^="#hb-icon-battery-full"] {
+  background-position: -6em 0em;
+}
+.side .md a[href^="#hb-icon-bin"] {
+  background-position: -7.2em 0em;
+}
+.side .md a[href^="#hb-icon-blank-page"] {
+  background-position: -8.4em 0em;
+}
+.side .md a[href^="#hb-icon-block"] {
+  background-position: -9.6em 0em;
+}
+.side .md a[href^="#hb-icon-book"] {
+  background-position: -10.8em 0em;
+}
+.side .md a[href^="#hb-icon-briefcase"] {
+  background-position: 0em -1.2em;
+}
+.side .md a[href^="#hb-icon-calculator"] {
+  background-position: -1.2em -1.2em;
+}
+.side .md a[href^="#hb-icon-calendar"] {
+  background-position: -2.4em -1.2em;
+}
+.side .md a[href^="#hb-icon-calendar-date"] {
+  background-position: -3.6em -1.2em;
+}
+.side .md a[href^="#hb-icon-chart"] {
+  background-position: -4.8em -1.2em;
+}
+.side .md a[href^="#hb-icon-chart-pie"] {
+  background-position: -6em -1.2em;
+}
+.side .md a[href^="#hb-icon-checkmark"] {
+  background-position: -7.2em -1.2em;
+}
+.side .md a[href^="#hb-icon-chess"] {
+  background-position: -8.4em -1.2em;
+}
+.side .md a[href^="#hb-icon-clock"] {
+  background-position: -9.6em -1.2em;
+}
+.side .md a[href^="#hb-icon-cloud"] {
+  background-position: -10.8em -1.2em;
+}
+.side .md a[href^="#hb-icon-cloud-download"] {
+  background-position: 0em -2.4em;
+}
+.side .md a[href^="#hb-icon-cloud-upload"] {
+  background-position: -1.2em -2.4em;
+}
+.side .md a[href^="#hb-icon-coffee"] {
+  background-position: -2.4em -2.4em;
+}
+.side .md a[href^="#hb-icon-comment"] {
+  background-position: -3.6em -2.4em;
+}
+.side .md a[href^="#hb-icon-comments"] {
+  background-position: -4.8em -2.4em;
+}
+.side .md a[href^="#hb-icon-computer-mouse"] {
+  background-position: -6em -2.4em;
+}
+.side .md a[href^="#hb-icon-database"] {
+  background-position: -7.2em -2.4em;
+}
+.side .md a[href^="#hb-icon-delete"] {
+  background-position: -8.4em -2.4em;
+}
+.side .md a[href^="#hb-icon-dislike"] {
+  background-position: -9.6em -2.4em;
+}
+.side .md a[href^="#hb-icon-dollar"] {
+  background-position: -10.8em -2.4em;
+}
+.side .md a[href^="#hb-icon-down"] {
+  background-position: 0em -3.6em;
+}
+.side .md a[href^="#hb-icon-edit"] {
+  background-position: -1.2em -3.6em;
+}
+.side .md a[href^="#hb-icon-eject"] {
+  background-position: -2.4em -3.6em;
+}
+.side .md a[href^="#hb-icon-email"] {
+  background-position: -3.6em -3.6em;
+}
+.side .md a[href^="#hb-icon-euro"] {
+  background-position: -4.8em -3.6em;
+}
+.side .md a[href^="#hb-icon-fast-forward"] {
+  background-position: -6em -3.6em;
+}
+.side .md a[href^="#hb-icon-film"] {
+  background-position: -7.2em -3.6em;
+}
+.side .md a[href^="#hb-icon-folder"] {
+  background-position: -8.4em -3.6em;
+}
+.side .md a[href^="#hb-icon-games"] {
+  background-position: -9.6em -3.6em;
+}
+.side .md a[href^="#hb-icon-headphones"] {
+  background-position: -10.8em -3.6em;
+}
+.side .md a[href^="#hb-icon-heart"] {
+  background-position: 0em -4.8em;
+}
+.side .md a[href^="#hb-icon-help"] {
+  background-position: -1.2em -4.8em;
+}
+.side .md a[href^="#hb-icon-home"] {
+  background-position: -2.4em -4.8em;
+}
+.side .md a[href^="#hb-icon-id-card"] {
+  background-position: -3.6em -4.8em;
+}
+.side .md a[href^="#hb-icon-info"] {
+  background-position: -4.8em -4.8em;
+}
+.side .md a[href^="#hb-icon-key"] {
+  background-position: -6em -4.8em;
+}
+.side .md a[href^="#hb-icon-left"] {
+  background-position: -7.2em -4.8em;
+}
+.side .md a[href^="#hb-icon-lightbulb"] {
+  background-position: -8.4em -4.8em;
+}
+.side .md a[href^="#hb-icon-like"] {
+  background-position: -9.6em -4.8em;
+}
+.side .md a[href^="#hb-icon-link"] {
+  background-position: -10.8em -4.8em;
+}
+.side .md a[href^="#hb-icon-locked"] {
+  background-position: 0em -6em;
+}
+.side .md a[href^="#hb-icon-magic-wand"] {
+  background-position: -1.2em -6em;
+}
+.side .md a[href^="#hb-icon-mail"] {
+  background-position: -2.4em -6em;
+}
+.side .md a[href^="#hb-icon-mappin"] {
+  background-position: -3.6em -6em;
+}
+.side .md a[href^="#hb-icon-microphone"] {
+  background-position: -4.8em -6em;
+}
+.side .md a[href^="#hb-icon-minus"] {
+  background-position: -6em -6em;
+}
+.side .md a[href^="#hb-icon-monitor"] {
+  background-position: -7.2em -6em;
+}
+.side .md a[href^="#hb-icon-mp3-player"] {
+  background-position: -8.4em -6em;
+}
+.side .md a[href^="#hb-icon-music"] {
+  background-position: -9.6em -6em;
+}
+.side .md a[href^="#hb-icon-network"] {
+  background-position: -10.8em -6em;
+}
+.side .md a[href^="#hb-icon-new-mail"] {
+  background-position: 0em -7.2em;
+}
+.side .md a[href^="#hb-icon-old-telephone"] {
+  background-position: -1.2em -7.2em;
+}
+.side .md a[href^="#hb-icon-page"] {
+  background-position: -2.4em -7.2em;
+}
+.side .md a[href^="#hb-icon-pages"] {
+  background-position: -3.6em -7.2em;
+}
+.side .md a[href^="#hb-icon-paint-brush"] {
+  background-position: -4.8em -7.2em;
+}
+.side .md a[href^="#hb-icon-palette"] {
+  background-position: -6em -7.2em;
+}
+.side .md a[href^="#hb-icon-pause"] {
+  background-position: -7.2em -7.2em;
+}
+.side .md a[href^="#hb-icon-phone"] {
+  background-position: -8.4em -7.2em;
+}
+.side .md a[href^="#hb-icon-photo"] {
+  background-position: -9.6em -7.2em;
+}
+.side .md a[href^="#hb-icon-photo-camera"] {
+  background-position: -10.8em -7.2em;
+}
+.side .md a[href^="#hb-icon-play"] {
+  background-position: 0em -8.4em;
+}
+.side .md a[href^="#hb-icon-plus"] {
+  background-position: -1.2em -8.4em;
+}
+.side .md a[href^="#hb-icon-print"] {
+  background-position: -2.4em -8.4em;
+}
+.side .md a[href^="#hb-icon-process"] {
+  background-position: -3.6em -8.4em;
+}
+.side .md a[href^="#hb-icon-puzzle"] {
+  background-position: -4.8em -8.4em;
+}
+.side .md a[href^="#hb-icon-quote"] {
+  background-position: -6em -8.4em;
+}
+.side .md a[href^="#hb-icon-record"] {
+  background-position: -7.2em -8.4em;
+}
+.side .md a[href^="#hb-icon-refresh"] {
+  background-position: -8.4em -8.4em;
+}
+.side .md a[href^="#hb-icon-repeat"] {
+  background-position: -9.6em -8.4em;
+}
+.side .md a[href^="#hb-icon-rewind"] {
+  background-position: -10.8em -8.4em;
+}
+.side .md a[href^="#hb-icon-right-arrow"] {
+  background-position: 0em -9.6em;
+}
+.side .md a[href^="#hb-icon-rss"] {
+  background-position: -1.2em -9.6em;
+}
+.side .md a[href^="#hb-icon-save"] {
+  background-position: -2.4em -9.6em;
+}
+.side .md a[href^="#hb-icon-scissor"] {
+  background-position: -3.6em -9.6em;
+}
+.side .md a[href^="#hb-icon-search"] {
+  background-position: -4.8em -9.6em;
+}
+.side .md a[href^="#hb-icon-security"] {
+  background-position: -6em -9.6em;
+}
+.side .md a[href^="#hb-icon-settings"] {
+  background-position: -7.2em -9.6em;
+}
+.side .md a[href^="#hb-icon-shopping-cart"] {
+  background-position: -8.4em -9.6em;
+}
+.side .md a[href^="#hb-icon-shut-down"] {
+  background-position: -9.6em -9.6em;
+}
+.side .md a[href^="#hb-icon-skip-backward"] {
+  background-position: -10.8em -9.6em;
+}
+.side .md a[href^="#hb-icon-skip-forward"] {
+  background-position: 0em -10.8em;
+}
+.side .md a[href^="#hb-icon-smart-phone"] {
+  background-position: -1.2em -10.8em;
+}
+.side .md a[href^="#hb-icon-speedometer"] {
+  background-position: -2.4em -10.8em;
+}
+.side .md a[href^="#hb-icon-star"] {
+  background-position: -3.6em -10.8em;
+}
+.side .md a[href^="#hb-icon-sterling"] {
+  background-position: -4.8em -10.8em;
+}
+.side .md a[href^="#hb-icon-stop"] {
+  background-position: -6em -10.8em;
+}
+.side .md a[href^="#hb-icon-tag"] {
+  background-position: -7.2em -10.8em;
+}
+.side .md a[href^="#hb-icon-target"] {
+  background-position: -8.4em -10.8em;
+}
+.side .md a[href^="#hb-icon-television"] {
+  background-position: -9.6em -10.8em;
+}
+.side .md a[href^="#hb-icon-tools"] {
+  background-position: -10.8em -10.8em;
+}
+.side .md a[href^="#hb-icon-umbrella"] {
+  background-position: 0em -12em;
+}
+.side .md a[href^="#hb-icon-unlocked"] {
+  background-position: -1.2em -12em;
+}
+.side .md a[href^="#hb-icon-up"] {
+  background-position: -2.4em -12em;
+}
+.side .md a[href^="#hb-icon-user"] {
+  background-position: -3.6em -12em;
+}
+.side .md a[href^="#hb-icon-users"] {
+  background-position: -4.8em -12em;
+}
+.side .md a[href^="#hb-icon-video-camera"] {
+  background-position: -6em -12em;
+}
+.side .md a[href^="#hb-icon-volume-down"] {
+  background-position: -7.2em -12em;
+}
+.side .md a[href^="#hb-icon-volume-up"] {
+  background-position: -8.4em -12em;
+}
+.side .md a[href^="#hb-icon-warning"] {
+  background-position: -9.6em -12em;
+}
+.side .md a[href^="#hb-icon-webcam"] {
+  background-position: -10.8em -12em;
+}
+.side .md a[href^="#hb-icon-wifi"] {
+  background-position: 0em -13.2em;
+}
+.side .md a[href^="#hb-icon-world"] {
+  background-position: -1.2em -13.2em;
+}
+.side .md a[href^="#hb-icon-yen"] {
+  background-position: -2.4em -13.2em;
+}
+.side .md a[href^="#hb-icon-zoom-in"] {
+  background-position: -3.6em -13.2em;
+}
+.side .md a[href^="#hb-icon-zoom-out"] {
+  background-position: -4.8em -13.2em;
+}
+.side .md a[href^="#hb-"] {
+  pointer-events: none;
+  cursor: default;
+}
+.side .md a[href^="#hb-button"] {
+  display: none;
+}
+.side .md a[href^="#hb-button"] + a {
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: large;
+  display: block;
+  padding: 15px;
+  margin: -16px;
+}
+.side .md a[href="#hb-button-azure"] + a {
+  border: solid 1px rgba(0, 125, 251, 0.4);
+  background-color: rgba(0, 127, 255, 0.6);
+}
+.side .md a[href="#hb-button-azure"] + a:hover {
+  background-color: rgba(0, 127, 254, 0.8);
+}
+.side .md a[href="#hb-button-golden"] + a {
+  border: solid 1px rgba(251, 212, 0, 0.4);
+  background-color: rgba(255, 215, 0, 0.6);
+}
+.side .md a[href="#hb-button-golden"] + a:hover {
+  background-color: rgba(254, 215, 0, 0.8);
+}
+.side .md a[href="#hb-button-gray"] + a {
+  border: solid 1px rgba(202, 202, 202, 0.4);
+  background-color: rgba(204, 204, 204, 0.6);
+}
+.side .md a[href="#hb-button-gray"] + a:hover {
+  background-color: rgba(204, 204, 204, 0.8);
+}
+.side .md a[href="#hb-button-magenta"] + a {
+  border: solid 1px rgba(251, 0, 142, 0.4);
+  background-color: rgba(255, 0, 144, 0.6);
+}
+.side .md a[href="#hb-button-magenta"] + a:hover {
+  background-color: rgba(254, 0, 144, 0.8);
+}
+.side .md a[href="#hb-button-mantis"] + a {
+  border: solid 1px rgba(113, 194, 98, 0.4);
+  background-color: rgba(116, 195, 101, 0.6);
+}
+.side .md a[href="#hb-button-mantis"] + a:hover {
+  background-color: rgba(116, 195, 101, 0.8);
+}
+.side .md a[href="#hb-button-orangered"] + a {
+  border: solid 1px rgba(251, 68, 0, 0.4);
+  background-color: rgba(255, 69, 0, 0.6);
+}
+.side .md a[href="#hb-button-orangered"] + a:hover {
+  background-color: rgba(254, 69, 0, 0.8);
+}
+.side .md a[href="#hb-button-plum"] + a {
+  border: solid 1px rgba(129, 48, 118, 0.4);
+  background-color: rgba(132, 49, 121, 0.6);
+}
+.side .md a[href="#hb-button-plum"] + a:hover {
+  background-color: rgba(132, 49, 121, 0.8);
+}
+.side .md a[href="#hb-button-red"] + a {
+  border: solid 1px rgba(251, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.6);
+}
+.side .md a[href="#hb-button-red"] + a:hover {
+  background-color: rgba(254, 0, 0, 0.8);
+}
+.side .md a[href="#hb-button-teal"] + a {
+  border: solid 1px rgba(0, 124, 124, 0.4);
+  background-color: rgba(0, 128, 128, 0.6);
+}
+.side .md a[href="#hb-button-teal"] + a:hover {
+  background-color: rgba(0, 127, 127, 0.8);
+}
+.side .md > p {
+  display: none;
+}
+.side .md > blockquote {
+  position: relative;
+  margin: 20px 0;
+  border: none;
+  color: #333;
+  padding: 0;
+}
+.side .md > blockquote > p:first-child a {
+  background-color: transparent;
+  border-color: transparent;
+}
+.side .md > blockquote > p:first-child a:before {
+  border: solid 1px transparent;
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  height: 100%;
+  content: "";
+  width: 100%;
+  z-index: 0;
+  left: -1px;
+  top: -1px;
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-azure"]:before {
+  border: solid 1px rgba(0, 125, 252, 0.2);
+  background-color: rgba(0, 127, 255, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-golden"]:before {
+  border: solid 1px rgba(252, 212, 0, 0.2);
+  background-color: rgba(255, 215, 0, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-gray"]:before {
+  border: solid 1px rgba(202, 202, 202, 0.2);
+  background-color: rgba(204, 204, 204, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-magenta"]:before {
+  border: solid 1px rgba(252, 0, 142, 0.2);
+  background-color: rgba(255, 0, 144, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-mantis"]:before {
+  border: solid 1px rgba(114, 194, 99, 0.2);
+  background-color: rgba(116, 195, 101, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-orangered"]:before {
+  border: solid 1px rgba(252, 68, 0, 0.2);
+  background-color: rgba(255, 69, 0, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-plum"]:before {
+  border: solid 1px rgba(130, 48, 119, 0.2);
+  background-color: rgba(132, 49, 121, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-red"]:before {
+  border: solid 1px rgba(252, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
+}
+.side .md > blockquote > p:first-child a[href="#hb-block-teal"]:before {
+  border: solid 1px rgba(0, 125, 125, 0.2);
+  background-color: rgba(0, 128, 128, 0.2);
+}
+.side .md > blockquote > blockquote {
+  counter-reset: hb-rules;
+  position: relative;
+  padding: 10px;
+  border: none;
+  z-index: 99;
+  margin: 0;
+}
+.side .md > blockquote > blockquote h1 {
+  padding: 5px;
+  margin: 0;
+}
+.side .md > blockquote > blockquote p {
+  padding: 5px;
+  margin: 0;
+}
+.side .md > blockquote > blockquote ul, .side .md > blockquote > blockquote ol {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+.side .md > blockquote > blockquote ul li, .side .md > blockquote > blockquote ol li {
+  padding: 5px 5px 5px 0;
+}
+.side .md > blockquote > blockquote ul li > p, .side .md > blockquote > blockquote ol li > p {
+  margin: 0;
+}
+.side .md > blockquote > blockquote blockquote {
+  border-left: solid 5px rgba(204, 204, 204, 0.6);
+  background-color: rgba(204, 204, 204, 0.2);
+  padding: 5px;
+  margin: 5px;
+}
+.side .md > blockquote > blockquote blockquote p {
+  padding: 5px;
+}
